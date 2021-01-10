@@ -1,0 +1,17 @@
+.app {
+  display: flex;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar > * {
+  margin: 12px 0;
+}
+
+.main-area {
+  
+}

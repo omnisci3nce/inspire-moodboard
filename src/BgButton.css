@@ -1,0 +1,14 @@
+.bg-btn {
+  color: var(--text-secondary-color);
+  background-color: var(--background-color);
+  padding: 10px 12px;
+  border: none;
+  border-radius: 12px;
+  width: 62px;
+  cursor: pointer;
+}
+
+.bg-btn:hover {
+  /* border: 2px solid var(--foreground-1-color); */
+  color: white;
+}

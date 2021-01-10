@@ -24,3 +24,7 @@ body {
   color: var(--primary-text-color);
   background-color: var(--background-color);
 }
+
+.app {
+  padding: 16px;
+}
