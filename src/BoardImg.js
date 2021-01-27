@@ -1,11 +1,27 @@
-const MAX_H = 256
-const MAX_W = 256
+import { Rnd } from 'react-rnd'
+
+const MAX_H = 4096
+const MAX_W = 4096
 
 const BoardImg = ({image, onHover, onEndHover}) => {
   return (
-    <span onMouseEnter={onHover} onMouseLeave={onEndHover}>
-      <img style={{ maxWidth: MAX_W, maxHeight: MAX_H, objectFit: 'cover' }} src={image} />
-    </span>
+    <Rnd
+      default={{
+        x: 0,
+        y: 0,
+        width: 600,
+        height: 400,
+        enableResizing: true
+      }}
+    >
+      <span>
+        <img style={
+          { maxWidth: MAX_W, 
+            maxHeight: MAX_H, 
+            objectFit: 'cover'
+          }} src={image} draggable="false" />
+      </span>
+    </Rnd>
   )
 }
 

@@ -19,12 +19,16 @@ const MagnifyDownBtn = <ZoomOutSolid style={{
 
 const initialImages = [
   'https://images.template.net/wp-content/uploads/2016/12/17104154/Fantasy-Landscape-Painting-Illustration.jpg',
-  'https://pbs.twimg.com/media/Dvy1z2RUYAAyJmL?format=jpg&name=4096x4096',
-  'https://i.pinimg.com/564x/3d/ee/d2/3deed25def7a1a1db1521c5577d60fa5.jpg'
+  // 'https://pbs.twimg.com/media/Dvy1z2RUYAAyJmL?format=jpg&name=4096x4096',
+  // 'https://i.pinimg.com/564x/3d/ee/d2/3deed25def7a1a1db1521c5577d60fa5.jpg'
 ]
 
+const imgStructFromURL = url => ({
+  url,
+})
+
 function App() {
-  const [images, setImages] = useState(initialImages)
+  const [images, setImages] = useState(initialImages.map(imgStructFromURL))
 
   return (
     <div className="app">
