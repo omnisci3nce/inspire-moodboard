@@ -8,8 +8,8 @@ const Moodboard = ({ images }) => {
   return (
     <div className={`moodboard ${show ? 'show-grid' : ''}`}>
 
-      { images.map(img => {
-        return <BoardImg key={img.url} onHover={() => setShow(true)} onEndHover={() => setShow(false)} image={img.url} />
+      { images.map((img, i) => {
+        return <BoardImg key={img.url} onHover={() => setShow(true)} onEndHover={() => setShow(false)} x={i * 150} image={img.url} />
       }) }
 
     </div>

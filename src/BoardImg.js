@@ -3,13 +3,13 @@ import { Rnd } from 'react-rnd'
 const MAX_H = 4096
 const MAX_W = 4096
 
-const BoardImg = ({image, onHover, onEndHover}) => {
+const BoardImg = ({x, image, onHover, onEndHover}) => {
   return (
     <Rnd
       lockAspectRatio={true}
       default={{
-        x: 50,
-        y: 100,
+        x: x,
+        y: 50,
         width: 450,
         height: 253,
       }}
